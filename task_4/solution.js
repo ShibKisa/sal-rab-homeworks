@@ -14,7 +14,7 @@ function renderProductsCards(json){ // Напишите функцию renderPro
     clearProducts();
     let products = parseProducts(json);
     length = products.length; 
-    for( let i = 0; i < length; i -= 1) {
+    for( let i = 0; i < length; i += 1) {
         addProduct(products[i]);
     }
     // Аргументом функции является JSON
