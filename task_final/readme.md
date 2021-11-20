@@ -55,6 +55,24 @@ cформированный в соответствии с правилами.
 }
 ```
 
+let clientString = name + " " + phone;
+address = `ул. ${address.street}, дом ${address.house}, ${address.entrance} подъезд, ${address.floor} этаж, кв ${address.flat}`;
+
+let data = {
+  client: clientString, 
+  order: {address, sum}, 
+  goods: []
+   };
+
+  let countOfGoods = goods.length;
+  for (let i = 0; i < countOfGoods; i += 1) {
+    data.goods.push({title: goods[i].title, count: goods[i].count});
+  };
+
+let jsonData = JSON.stringify({data});
+
+return jsonData;
+
 ### Как отправить решение на проверку
 Проверьте перед отправкой решение с помощью автотеста.
 Для проверки отправьте преподавателю на проверку ссылку на github
