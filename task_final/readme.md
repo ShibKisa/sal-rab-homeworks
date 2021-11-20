@@ -54,6 +54,14 @@ cформированный в соответствии с правилами.
   }
 }
 ```
+let client;
+let data = {client,  order: {}, goods: []};
+
+for (let i = 0; i < countOfGoods; i += 1) {
+  data.goods.push ({
+    'title': goods[i].title,
+    'count':goods[i].count
+    });
 
 let clientString = name + " " + phone;
 address = `ул. ${address.street}, дом ${address.house}, ${address.entrance} подъезд, ${address.floor} этаж, кв ${address.flat}`;
@@ -69,9 +77,9 @@ let data = {
     data.goods.push({title: goods[i].title, count: goods[i].count});
   };
 
-let jsonData = JSON.stringify({data});
-
+let jsonData = JSON.stringify({'data':data});
 return jsonData;
+}
 
 ### Как отправить решение на проверку
 Проверьте перед отправкой решение с помощью автотеста.
