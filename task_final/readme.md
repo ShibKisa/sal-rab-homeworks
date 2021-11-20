@@ -55,7 +55,7 @@ cформированный в соответствии с правилами.
 }
 ```
 function sendRequest(name, phone, address, goods, sum) {
-let data = {goods: [], order: {}, sum};
+
         const client = `${name} ${phone}`;
         const {street, house, entrance, floor, flat} = address;
         const order = {
