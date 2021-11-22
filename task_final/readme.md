@@ -73,8 +73,9 @@ address = `ул. ${address.street}, дом ${address.house}, ${address.entrance}
     data.goods.push({title: goods[i].title, count: goods[i].count});
   };
 
-let jsonData = JSON.stringify({'data':data});
+let jsonData = JSON.stringify(data);
 return jsonData;
+}
 }
 
 ### Как отправить решение на проверку
